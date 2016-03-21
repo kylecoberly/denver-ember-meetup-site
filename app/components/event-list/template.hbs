@@ -1,0 +1,7 @@
+<h2>Event List</h2>
+{{input type="text" value=searchTerm}}
+<ul>
+    {{#each model.events key="id" as |event|}}
+        <li>{{event.title}}</li>
+    {{/each}}
+</ul>

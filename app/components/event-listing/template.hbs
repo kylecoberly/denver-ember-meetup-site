@@ -1,0 +1,32 @@
+<h3>{{model.title}}</h3>
+<time>{{model.date}} - {{model.time}}</time>
+<figure>
+    <img src="" alt="MAP GOES HERE" />
+    <figcaption>{{model.locationName}}</figcaption>
+</figure>
+<p>{{model.description}}</p>
+
+{{#if model.resources}}
+    <h4>Resources</h4>
+    <ul>
+        {{#each model.resources key="id" as |resource|}}
+            <li><a href="{{resource.url}}">{{resource.label}}</a></li>
+        {{/each}}
+    </ul>
+{{/if}}
+
+{{#if model.video}}
+    <h4>Video</h4>
+    <video>
+        <source src="{{model.video.url}}" />
+    </video>
+{{/if}}
+
+{{#if model.photos}}
+    <h4>Photos</h4>
+    <ul>
+        {{#each model.photos key="id" as |photo|}}
+            <li><a href="{{photo.url}}"><img src="{{photo.url}}" alt="{{photo.description}}" /></a></li>
+        {{/each}}
+    </ul>
+{{/if}}

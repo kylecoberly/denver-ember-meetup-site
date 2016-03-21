@@ -1,0 +1,21 @@
+nav {
+    display: inline-block;
+    li {
+        display: inline-block;
+        transition: all $animation-time;
+        &:hover {
+            background-color: lighten($dark, 10%);
+        }
+        a {
+            padding: 1rem;
+            @include navigation-bar;
+            &.active {
+                background-color: lighten($dark, 10%);
+            }
+        }
+        &:not(:last-child)::after {
+            content: "|";
+            color: $white;
+        }
+    }
+}

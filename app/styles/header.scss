@@ -1,0 +1,14 @@
+header {
+    background-color: $dark;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    h1 a {
+        @include main-header;
+        display: inline-block;
+        .logo {
+            width: 25px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<h2>Member List</h2>
+<ul>
+    {{#each model.members key="id" as |member|}}
+        <img src="{{member.portraitUrl}}" alt="{{member.fullName}}" />
+        <h3>{{member.fullName}}</h3>
+        {{#if member.title}}
+            <p>{{member.title}}</p>
+        {{/if}}
+    {{/each}}
+</ul>

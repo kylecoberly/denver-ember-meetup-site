@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300,900);
+
+body {
+    font-family: "Roboto", sans-serif; 
+    color: $black;
+}
+
+@mixin main-header {
+    font-size: 2rem;
+    font-weight: 900;
+    color: $white;
+}
+
+@mixin legal {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    color: $white;
+}
+
+@mixin navigation-bar {
+    font-weight: 400;
+    color: $white;
+}

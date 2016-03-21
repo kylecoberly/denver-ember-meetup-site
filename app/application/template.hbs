@@ -1,0 +1,12 @@
+{{#if viewport.isSmall}}
+    {{partial "mobile-header"}}
+{{else}}
+    {{partial "header"}}
+{{/if}}
+<main>
+    {{outlet}}
+</main>
+{{#unless viewport.isSmall}}
+    <div>Chat Widget</div>
+{{/unless}}
+{{partial "footer"}}
